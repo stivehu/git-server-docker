@@ -70,7 +70,11 @@ AuthorizedKeysFile	.ssh/authorized_keys
 
 # To disable tunneled clear text passwords, change to no here!
 PasswordAuthentication no
-#PermitEmptyPasswords no
+PermitEmptyPasswords no
+
+# Kulcsos auth only: a jelszo-alapu kihivasokat is tiltjuk, hogy a
+# CVE-2026-123158 jelszo-auth kodutja semmikepp ne legyen elerheto.
+KbdInteractiveAuthentication no
 
 # Change to no to disable s/key passwords
 #ChallengeResponseAuthentication yes
